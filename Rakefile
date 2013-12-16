@@ -12,3 +12,5 @@ RSpec::Core::RakeTask.new(:coverage) do |spec|
 end
 
 
+require 'rake/version_task'
+Rake::VersionTask.new
