@@ -1,0 +1,103 @@
+#!/usr/bin/env ruby
+
+require 'highline/import'
+require 'base64'
+require 'polarbear'
+
+#-----------------------------------------------------------------------------
+# ................ A R G U M E N T S .. P R O C E S S I N G .................
+#-----------------------------------------------------------------------------
+
+#-----------------------------------------------------------------------------
+# This hash will hold all of the options parsed from the command-line by
+# OptionParser.
+# config
+# adding reviewer
+# adding observer
+# adding diff
+# creating a review
+# cancelling review
+# starting a review
+# finishing a review
+# deleting a review
+# open a review in the browser
+# get a review id
+# get state of a review
+#-----------------------------------------------------------------------------
+options = {}
+loglevels = [:debug, :info, :warn, :error, :fatal]
+ 
+optparse = OptionParser.new do |opts|
+  # Set a banner, displayed at the top of the help screen.
+  opts.banner = 'Usage: poohbear [options] oldbranch newbranch ...'
+   
+  # Define the options, and what they do
+  options[:quick] = false
+  opts.on( '-q', '--quick', 'Perform the task quickly' ) do
+    options[:quick] = true
+  end
+   
+  options[:logfile] = nil
+  opts.on( '-l', '--logfile FILE', 'Write log to FILE' ) do |file|
+    options[:logfile] = file
+  end
+  
+  options[:usage] = nil
+  opts.on( '-u', '--usage', 'Print one liner about this script' ) do
+     options[:usage] = true
+  end
+
+  options[:list] = []
+  opts.on( '-a', '--list a,b,c', Array, 'List of parameters') do |l|
+    options[:list] = l
+  end
+  
+  options[:loglevel] = nil
+  opts.on( '-i', '--loglevel OPT', loglevels, 'Log level') do |s|
+    options[:loglevel] = s
+  end 
+
+  opts.on( '-v', '--verbose', 'Verbose ') do
+    options[:loglevel] = :info
+  end 
+
+  # This displays the help screen, all programs are assumed to have this 
+  # option.
+  opts.on( '-h', '--help', 'Display this screen' ) do
+    puts opts
+    exit
+  end
+end
+
+#-----------------------------------------------------------------------------
+# Parse the command-line. Remember there are two forms of the parse method. 
+# The 'parse' method simply parses ARGV, while the 'parse!' method parses 
+# ARGV and removes any options found there, as well as any parameters for the
+# the options. What's left is the list of files to resize.
+#-----------------------------------------------------------------------------
+begin
+  optparse.parse!
+rescue => ex
+  puts ex.to_s
+  exit 1
+end
+
+_codecollab = PolarBear::CodeCollab.new(
+    :username => 'plaplante',
+    :password => "p0utgr0s'",
+    :url => 'https://development-us:8443'
+)
+
+puts _codecollab.username
+#last_review = _codecollab.last_review
+#puts last_review.review_id
+#puts last_review.active?
+
+_codecollab.active_reviews('Pat Laplante').each do |review|
+  puts review.inspect
+end
+
+#puts _codecollab.admin.create_review('pat is awesome')
+
+
+
