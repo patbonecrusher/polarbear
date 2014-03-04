@@ -1,19 +1,26 @@
 <component name="ProjectDictionaryState">
   <dictionary name="pat">
     <words>
+      <w>aburr</w>
+      <w>addgitdiffs</w>
       <w>bearcommand</w>
       <w>ccollab</w>
       <w>codecollab</w>
       <w>collab</w>
       <w>commandpath</w>
+      <w>dcontains</w>
       <w>execpath</w>
       <w>filetest</w>
+      <w>gitdiffs</w>
       <w>globaloptions</w>
+      <w>gyoku</w>
       <w>inprogress</w>
+      <w>jearl</w>
       <w>laplante</w>
       <w>loglevel</w>
       <w>loglevels</w>
       <w>newbranch</w>
+      <w>newkey</w>
       <w>nori</w>
       <w>oldbranch</w>
       <w>optparse</w>
@@ -23,7 +30,9 @@
       <w>reviewid</w>
       <w>simplecov</w>
       <w>startdoc</w>
+      <w>stdins</w>
       <w>stopdoc</w>
+      <w>submittedreport</w>
       <w>utgr</w>
       <w>wget</w>
     </words>

@@ -32,6 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'highline'
   spec.add_dependency 'nori'
   spec.add_dependency 'nokogiri'
+  spec.add_dependency 'gyoku'
+  spec.add_dependency 'addressable'
 
-  
 end

@@ -2,37 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/polarbear/command/admin.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/polarbear/utils/ccollab_locator.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/polarbear/codecollab.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/polarbear/command/executor.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/pat.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/polarbear.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/poohbear" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/polarbear/review.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/polarbear/command/batch.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/polarbear/command/config.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/polarbear/model/configuration.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/polarbear/command/report.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/polarbear/model/review.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/polarbear/review.rb" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/polarbear/command/executor.rb" afterPath="$PROJECT_DIR$/lib/polarbear/utils/executor.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/command/admin.rb" afterPath="$PROJECT_DIR$/lib/polarbear/command/admin.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/codecollab.rb" afterPath="$PROJECT_DIR$/lib/polarbear/codecollab.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/pat.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/pat.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/polarbear.gemspec" afterPath="$PROJECT_DIR$/polarbear.gemspec" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/polarbear.iml" afterPath="$PROJECT_DIR$/.idea/polarbear.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear.rb" afterPath="$PROJECT_DIR$/lib/polarbear.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/version.rb" afterPath="$PROJECT_DIR$/lib/polarbear/version.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/poohbear" afterPath="$PROJECT_DIR$/bin/poohbear" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="polarbear.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393444485861" ignored="false" />
-    <file path="/poohbear" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393555142457" ignored="false" />
-    <file path="/polarbear.gemspec" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393532529976" ignored="false" />
+    <file path="/Dummy.txt" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393976633549" ignored="false" />
+    <file path="/poohbear" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393977059482" ignored="false" />
+    <file path="/polarbear.gemspec" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393961969774" ignored="false" />
     <file path="/command_executor.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393446849599" ignored="false" />
-    <file path="/executor.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393528435683" ignored="false" />
-    <file path="/admin.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393552502440" ignored="false" />
-    <file path="/codecollab.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393555006649" ignored="false" />
-    <file path="/review.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393553952985" ignored="false" />
+    <file path="/executor.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393975404801" ignored="false" />
+    <file path="/admin.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393969673330" ignored="false" />
+    <file path="/codecollab.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393975479813" ignored="false" />
+    <file path="/review.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393977017931" ignored="false" />
+    <file path="/batch.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393975660419" ignored="false" />
+    <file path="/polarbear.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393970943917" ignored="false" />
+    <file path="/configuration.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393959900179" ignored="false" />
+    <file path="/report.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393973563168" ignored="false" />
+    <file path="/config.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393975526457" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,64 +55,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="codecollab.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="codecollab.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/polarbear/codecollab.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="0" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.21828358">
+            <state line="39" column="0" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ruby-debug-ide.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-head/gems/ruby-debug-ide-0.4.17/lib/ruby-debug-ide.rb">
+      <file leaf-file-name="report.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/polarbear/command/report.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="0" selection-start="2022" selection-end="2022" vertical-scroll-proportion="0.0">
+            <state line="10" column="20" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="review.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/polarbear/review.rb">
+        <entry file="file://$PROJECT_DIR$/lib/polarbear/model/review.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="421" selection-end="421" vertical-scroll-proportion="0.0">
+            <state line="84" column="44" selection-start="2070" selection-end="2070" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kernel_require.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rvm/rubies/ruby-2.0.0-head/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb">
+      <file leaf-file-name="executor.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/polarbear/utils/executor.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="0" selection-start="4144" selection-end="4144" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pp.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-head/gems/nokogiri-1.6.1/lib/nokogiri/xml/pp.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="character_data.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-head/gems/nokogiri-1.6.1/lib/nokogiri/xml/pp/character_data.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nokogiri.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-head/gems/nokogiri-1.6.1/lib/nokogiri.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0">
+            <state line="9" column="34" selection-start="144" selection-end="168" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -121,7 +94,7 @@
       <file leaf-file-name="poohbear" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/poohbear">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="21" selection-start="2829" selection-end="2829" vertical-scroll-proportion="0.0">
+            <state line="95" column="12" selection-start="2812" selection-end="2812" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -130,7 +103,16 @@
       <file leaf-file-name="ccollab_locator.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/polarbear/utils/ccollab_locator.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="12" selection-start="807" selection-end="807" vertical-scroll-proportion="-13.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="configuration.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/polarbear/model/configuration.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="27" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,7 +121,25 @@
       <file leaf-file-name="admin.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/polarbear/command/admin.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="14" selection-start="1677" selection-end="1677" vertical-scroll-proportion="0.0">
+            <state line="12" column="0" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="batch.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/polarbear/command/batch.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="76" selection-end="76" vertical-scroll-proportion="-1.2687927">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/polarbear/command/config.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="5" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,6 +153,7 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="SYNC_SETTING" value="DONT" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
@@ -163,23 +164,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/polarbear/utils/ccollab_locator.rb" />
-        <option value="$PROJECT_DIR$/lib/polarbear.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/version.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/command_executor.rb" />
-        <option value="$PROJECT_DIR$/lib/polarbear/command/executor.rb" />
+        <option value="$PROJECT_DIR$/lib/polarbear/configuration.rb" />
+        <option value="$PROJECT_DIR$/lib/polarbear/report.rb" />
         <option value="$PROJECT_DIR$/polarbear.gemspec" />
-        <option value="$PROJECT_DIR$/lib/polarbear/command/admin.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/review.rb" />
-        <option value="$PROJECT_DIR$/bin/poohbear" />
+        <option value="$PROJECT_DIR$/lib/polarbear/command/executor.rb" />
+        <option value="$PROJECT_DIR$/lib/polarbear.rb" />
+        <option value="$PROJECT_DIR$/lib/polarbear/utils/executor.rb" />
+        <option value="$PROJECT_DIR$/lib/polarbear/command/admin.rb" />
+        <option value="$PROJECT_DIR$/lib/polarbear/command/config.rb" />
+        <option value="$PROJECT_DIR$/lib/polarbear/command/report.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/codecollab.rb" />
+        <option value="$PROJECT_DIR$/lib/polarbear/model/review.rb" />
+        <option value="$PROJECT_DIR$/bin/poohbear" />
+        <option value="$PROJECT_DIR$/lib/polarbear/command/batch.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1680" />
-    <option name="height" value="975" />
+    <option name="width" value="1303" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -297,7 +304,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="command" />
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -311,7 +318,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="coverage" />
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polarbear" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="command" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -337,13 +352,20 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="Errors" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/polarbear/model" />
+      <recent name="$PROJECT_DIR$/lib/polarbear/utils" />
+      <recent name="$PROJECT_DIR$/lib/polarbear/command" />
+    </key>
   </component>
   <component name="RunManager" selected="Ruby.Unnamed">
     <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
@@ -538,24 +560,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="975" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1303" height="876" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.6708428" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24965326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1493268" sideWeight="0.6708428" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39863327" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29435164" sideWeight="0.6290116" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3979461" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32915717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37098846" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.6708428" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -626,111 +648,10 @@
           <line>85</line>
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="24" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/polarbear/command/executor.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/polarbear.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="22" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/polarbear.gemspec">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="27" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-head/gems/nori-2.3.0/lib/nori.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/rubies/ruby-2.0.0-head/lib/ruby/2.0.0/monitor.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="0" selection-start="4312" selection-end="4312" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://GemDependency/#polarbear">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>GemDependency</ID>
-          <OriginalElement>#polarbear</OriginalElement>
-          <nodes>
-            <node x="" y="">celluloid</node>
-            <node x="" y="">coderay</node>
-            <node x="" y="">simplecov</node>
-            <node x="" y="">rake</node>
-            <node x="" y="">mini_portile</node>
-            <node x="" y="">rspec-core</node>
-            <node x="" y="">growl_notify</node>
-            <node x="" y="">file-find</node>
-            <node x="" y="">nokogiri</node>
-            <node x="" y="">sys-admin</node>
-            <node x="" y="">#polarbear</node>
-            <node x="" y="">rb-appscript</node>
-            <node x="" y="">version</node>
-            <node x="" y="">guard-rspec</node>
-            <node x="" y="">nori</node>
-            <node x="" y="">rspec</node>
-            <node x="" y="">formatador</node>
-            <node x="" y="">simplecov-html</node>
-            <node x="" y="">guard</node>
-            <node x="" y="">slop</node>
-            <node x="" y="">diff-lcs</node>
-            <node x="" y="">multi_json</node>
-            <node x="" y="">listen</node>
-            <node x="" y="">ffi</node>
-            <node x="" y="">rspec-expectations</node>
-            <node x="" y="">cli-colorize</node>
-            <node x="" y="">os</node>
-            <node x="" y="">timers</node>
-            <node x="" y="">pry</node>
-            <node x="" y="">rspec-mocks</node>
-            <node x="" y="">thor</node>
-            <node x="" y="">highline</node>
-            <node x="" y="">method_source</node>
-            <node x="" y="">bundler</node>
-            <node x="" y="">rb-fsevent</node>
-            <node x="" y="">lumberjack</node>
-            <node x="" y="">rb-inotify</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.5826848249027238" x="1018.0" y="240.0" />
-          <SelectedNodes />
-          <Categories />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/polarbear/utils/ccollab_locator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="12" selection-start="807" selection-end="807" vertical-scroll-proportion="-13.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/polarbear/command/admin.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="14" selection-start="1677" selection-end="1677" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-head/gems/nokogiri-1.6.1/lib/nokogiri.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="0" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0">
@@ -754,35 +675,91 @@
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-head/gems/nokogiri-1.6.1/lib/nokogiri/xml/pp/character_data.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0">
+        <state line="11" column="0" selection-start="262" selection-end="262" vertical-scroll-proportion="0.16620879">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-head/gems/ruby-debug-ide-0.4.17/lib/ruby-debug-ide.rb">
+    <entry file="file://$PROJECT_DIR$/polarbear.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="0" selection-start="2022" selection-end="2022" vertical-scroll-proportion="0.0">
+        <state line="35" column="35" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/polarbear/review.rb">
+    <entry file="file://$PROJECT_DIR$/lib/polarbear.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="421" selection-end="421" vertical-scroll-proportion="0.0">
+        <state line="9" column="4" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/poohbear">
+    <entry file="file://$PROJECT_DIR$/lib/polarbear/model/configuration.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="21" selection-start="2829" selection-end="2829" vertical-scroll-proportion="0.0">
+        <state line="10" column="27" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/polarbear/utils/executor.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="34" selection-start="144" selection-end="168" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/polarbear/utils/ccollab_locator.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/polarbear/command/admin.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/polarbear/command/config.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="5" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/polarbear/command/report.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="20" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/polarbear/codecollab.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.21828358">
+        <state line="39" column="0" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/polarbear/model/review.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="44" selection-start="2070" selection-end="2070" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/poohbear">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="12" selection-start="2812" selection-end="2812" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/polarbear/command/batch.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="76" selection-end="76" vertical-scroll-proportion="-1.2687927">
           <folding />
         </state>
       </provider>

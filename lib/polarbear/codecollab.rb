@@ -1,7 +1,14 @@
 require 'polarbear/utils/ccollab_locator'
 require 'polarbear/command/admin'
-require 'polarbear/review'
+require 'polarbear/command/report'
+require 'polarbear/command/config'
+
+require 'polarbear/model/review'
+require 'polarbear/model/configuration'
+
 require 'nori'
+require 'open-uri'
+require 'csv'
 
 module PolarBear
 
@@ -12,63 +19,102 @@ module PolarBear
 
     # :stopdoc:
     VALID_OPTIONS = %w/
-      password
-      username
-      url
-      quiet
-      debug
-      interactive
-      browser_enabled
       ccollab_execpath
     /
     # :startdoc:
 
-    attr_accessor :options
-
-    attr_accessor :url
-    attr_accessor :username
-    attr_accessor :password
-
-    attr_accessor :quiet
-    attr_accessor :debug
-    attr_accessor :interactive
-    attr_accessor :browser_enabled
-
     attr_accessor :ccollab_execpath
 
-    attr_reader :admin
+    attr_reader :commands
 
     # --------------------------------------------------------------------------
     # --------------------------------------------------------------------------
     # @param [Object] options
     def initialize(options = {})
+
       @options = options
-      puts @ccollab_execpath
-      @ccollab_execpath = find_ccollab_executable
       validate_and_set_options(options) unless options.empty?
 
+      @ccollab_execpath = find_ccollab_executable
+      Utils::Executor.instance.set_codecollab_exec_path(@ccollab_execpath)
       puts @ccollab_execpath
 
-      @admin = Command::Admin.new(@ccollab_execpath)
+      @commands = {}
+      @commands[:admin] = Command::Admin.new
+      @commands[:config] = Command::Config.new
+      @commands[:report] = Command::Report.new
+
+      @configuration = Configuration.new(@commands[:config].load_from_local_settings)
+
     end
 
-    def active_reviews(username)
-      reviews = Array.new
-      review_ids = @admin.get_open_reviews_id
-      review_xml = @admin.get_review_xml_info(review_ids.join(' '))
+    def active_reviews
+      reports_result = @commands[:report].request_active_report_for(@configuration.username)
+      reports_result.map { |report| Review.new(report) }
+    end
 
-      parser = Nori.new(:convert_tags_to => lambda { |tag| tag.snakecase.to_sym })
-      @reviews_content = parser.parse(review_xml)
-      @reviews_content[:reviews][:review].each() do |review_hash|
-        review = Review.new(review_hash, @admin)
-        reviews.push review if review.creator == username
-      end
+    def reviews_in_planning
+      reports_result = @commands[:report].request_report_in_planning_for(@configuration.username)
+      reports_result.map { |report| Review.new(report) }
+    end
 
-      reviews
+    def get_review_with_title(title)
+      reports_result = @commands[:report].get_review_with_title(@configuration.username, title)
+      reports_result.map { |report| Review.new(report) }
     end
 
     def last_review
-      Review.new(admin.get_review_xml_info('last'), @admin)
+      parser = Nori.new(:convert_tags_to => lambda { |tag| tag.snakecase.to_sym })
+      review_hash = parser.parse(@commands[:admin].get_review_xml_info('last'))
+      Review.new(review_hash[:reviews][:review][:general])
+    end
+
+    # @param [Object] review_data
+    def create_review(review_data = {})
+      puts review_data
+
+      options = PolarBear::Command::GlobalOptions.new()
+      batch = PolarBear::Command::Batch.new(options)
+
+      batch.add_command(':admin_review_create', {':title' => "#{review_data[:title]}"}) if (review_data.has_key?(:title))
+      batch.add_command(':admin_review_create/', '') if (!review_data.has_key?(:title))
+
+      if review_data.has_key?(:reviewers) || review_data.has_key?(:observers)
+        add_participants_content = { }
+        add_participants_content.compare_by_identity
+        review_data[:reviewers].each {|reviewer| add_participants_content[':participant'] = "reviewer=#{reviewer}" }
+        review_data[:observers].each {|observer| add_participants_content[':participant'] = "observer=#{observer}" }
+        add_participants_content[':review'] = 'last'
+        batch.add_command(':admin_review_set-participants', add_participants_content)
+        batch.add_command(':admin_review-xml', {':review' => 'last'})
+      end
+
+      batch.add_command(':admin_review-xml', {':review' => 'last'})
+
+      review_xml = @admin.execute_batch_command(batch)
+      parser = Nori.new(:convert_tags_to => lambda { |tag| tag.snakecase.to_sym })
+      review_hash = parser.parse(review_xml)
+      Review.new(review_hash[:reviews][:review])
+    end
+
+    def delete_reviews(reviews)
+      options = PolarBear::Command::GlobalOptions.new()
+      batch = PolarBear::Command::Batch.new(options)
+
+      reviews.each do |review|
+        puts review.inspect
+        batch.add_command('admin_review_cancel', {':review' => "#{review.review_id}"})
+      end
+
+      @admin.execute_batch_command(batch)
+    end
+
+    def login(url, username, password)
+      @commands[:admin].execute_command("login #{url} #{username} #{password}")
+    end
+
+    def logout(url, username, password)
+      @admin.execute_command("login #{url} #{username} #{password}")
     end
 
     private

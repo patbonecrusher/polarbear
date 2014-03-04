@@ -13,6 +13,8 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.3.5, RVM: ruby-2.0.0-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.2, RVM: ruby-2.0.0-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.3.5, RVM: ruby-2.0.0-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="celluloid (v0.15.2, RVM: ruby-2.0.0-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cli-colorize (v2.0.0, RVM: ruby-2.0.0-head) [gem]" level="application" />
@@ -24,7 +26,8 @@
     <orderEntry type="library" scope="PROVIDED" name="growl_notify (v0.0.3, RVM: ruby-2.0.0-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="guard (v2.2.4, RVM: ruby-2.0.0-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="guard-rspec (v4.2.0, RVM: ruby-2.0.0-head) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="highline (v1.6.20, RVM: ruby-2.0.0-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="gyoku (v1.1.1, RVM: ruby-2.0.0-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="highline (v1.6.21, RVM: ruby-2.0.0-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="listen (v2.4.0, RVM: ruby-2.0.0-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="lumberjack (v1.0.4, RVM: ruby-2.0.0-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="method_source (v0.8.2, RVM: ruby-2.0.0-head) [gem]" level="application" />
