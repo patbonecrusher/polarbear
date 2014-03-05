@@ -39,9 +39,7 @@ module PolarBear
     end
 
     def create_it!
-      raise 'must not already have an id' if ! @review_content[:id].nil?
-      raise 'must specify authors' if @review_content[:author].nil?
-      raise 'must specify 1 reviewers' if @review_content[:reviewers].empty?
+      can_create?
 
       options = PolarBear::Command::GlobalOptions.new()
       batch = PolarBear::Command::Batch.new(options)
@@ -49,6 +47,25 @@ module PolarBear
       batch.add_command(':admin_review_create', {':title' => "#{@title}"}) unless @title.nil?
       batch.add_command(':admin_review_create/', '') if @title.nil?
 
+      load_participants_in_batch(batch)
+
+      batch.add_command(':admin_review_finish', {':review' => 'last'})
+      batch.add_command(':admin_review-xml', {':review' => 'last'})
+
+      update_review_from_xml(batch.execute)
+
+    end
+
+    private
+
+    def can_create?
+      raise 'must not already have an id' if ! @review_content[:id].nil?
+      raise 'must specify authors' if @review_content[:author].nil?
+      raise 'must specify 1 reviewers' if @review_content[:reviewers].empty?
+      true
+    end
+
+    def load_participants_in_batch(batch)
       add_participants_content = { }
       add_participants_content.compare_by_identity
       add_participants_content[':participant'] = "author=#{@review_content[:author]}"
@@ -56,19 +73,14 @@ module PolarBear
       @review_content[:observers].each {|observer| add_participants_content[':participant'] = "observer=#{observer}" }
       add_participants_content[':review'] = 'last'
       batch.add_command(':admin_review_set-participants', add_participants_content)
-
-      batch.add_command(':admin_review_finish', {':review' => 'last'})
-      batch.add_command(':admin_review-xml', {':review' => 'last'})
-
-      review_xml = batch.execute
-      parser = Nori.new(:convert_tags_to => lambda { |tag| tag.snakecase.to_sym })
-      review_hash = parser.parse(review_xml)
-
-      load_data(review_hash[:reviews][:review][:general])
-
     end
 
-    private
+    def update_review_from_xml(xml)
+      parser = Nori.new(:convert_tags_to => lambda { |tag| tag.snakecase.to_sym })
+      review_hash = parser.parse(xml)
+
+      load_data(review_hash[:reviews][:review][:general])
+    end
 
     def load_data(hash)
       @review_content = normalize_hash(hash)
