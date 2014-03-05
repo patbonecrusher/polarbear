@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+require 'command-dispatcher'
+
+$scriptPath = File.expand_path(File.dirname(__FILE__))
+$scriptName = File.basename(__FILE__)
+$command = ARGV.shift
+dispatcher = CommandDispatcher::Dispatcher.new( $scriptPath, $scriptName )
+
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+def usage
+  puts 'Commands for working on a review.'
+  exit 0
+end
+
+#-----------------------------------------------------------------------------
+# ................ A R G U M E N T S .. P R O C E S S I N G .................
+#-----------------------------------------------------------------------------
+
+if ($command == '--usage')
+  usage
+end
+
+begin
+  dispatcher.dispatchCommand($command, *ARGV)
+rescue ArgumentError => ex
+  $stderr.puts 'Error: ' + ex.to_s + '.  Please specify a valid command.'
+  dispatcher.usage
+  exit -1
+ensure
+end

@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/polarbear/command/admin_review.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/poohbear-login" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/command/admin.rb" afterPath="$PROJECT_DIR$/lib/polarbear/command/admin.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/codecollab.rb" afterPath="$PROJECT_DIR$/lib/polarbear/codecollab.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/command/config.rb" afterPath="$PROJECT_DIR$/lib/polarbear/command/config.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/polarbear.gemspec" afterPath="$PROJECT_DIR$/polarbear.gemspec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/polarbear.iml" afterPath="$PROJECT_DIR$/.idea/polarbear.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear.rb" afterPath="$PROJECT_DIR$/lib/polarbear.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/poohbear" afterPath="$PROJECT_DIR$/bin/poohbear" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/model/review.rb" afterPath="$PROJECT_DIR$/lib/polarbear/model/review.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" name="Default" comment="" />
     <ignored path="polarbear.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393979918210" ignored="false" />
@@ -32,6 +20,7 @@
     <file path="/temp.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393980046577" ignored="false" />
     <file path="/admin_review.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393982287085" ignored="false" />
     <file path="/poohbear-login" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394056872953" ignored="false" />
+    <file path="/poohbear-review" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394058885524" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,15 +61,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="review.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/polarbear/model/review.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="43" selection-start="1274" selection-end="1274" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="admin_review.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/polarbear/command/admin_review.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -93,16 +73,25 @@
       <file leaf-file-name="poohbear" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/poohbear">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="0" selection-start="3029" selection-end="3149" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="433" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="poohbear-login" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="poohbear-review" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/poohbear-review">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="23" selection-start="726" selection-end="726" vertical-scroll-proportion="0.30985916">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="poohbear-login" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/poohbear-login">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="0" selection-start="2723" selection-end="2723" vertical-scroll-proportion="0.58685446">
+            <state line="85" column="40" selection-start="2612" selection-end="2612" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -163,7 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/polarbear/report.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/review.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/command/executor.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/utils/executor.rb" />
@@ -179,6 +167,7 @@
         <option value="$PROJECT_DIR$/lib/polarbear/model/configuration.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/command/config.rb" />
         <option value="$PROJECT_DIR$/bin/poohbear-login" />
+        <option value="$PROJECT_DIR$/bin/poohbear-review" />
       </list>
     </option>
   </component>
@@ -681,11 +670,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-head/gems/nokogiri-1.6.1/lib/nokogiri/xml/pp.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.0.0-head/gems/nokogiri-1.6.1/lib/nokogiri/xml/pp/character_data.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="262" selection-end="262" vertical-scroll-proportion="0.16620879" />
@@ -754,13 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/poohbear">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="0" selection-start="3029" selection-end="3149" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/polarbear/codecollab.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="64" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.0">
@@ -784,7 +761,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/poohbear-login">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="0" selection-start="2723" selection-end="2723" vertical-scroll-proportion="0.58685446">
+        <state line="85" column="40" selection-start="2612" selection-end="2612" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/poohbear">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="433" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/poohbear-review">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="23" selection-start="726" selection-end="726" vertical-scroll-proportion="0.30985916">
           <folding />
         </state>
       </provider>
