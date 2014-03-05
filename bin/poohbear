@@ -88,11 +88,12 @@ _codecollab = PolarBear::CodeCollab.new
 
 new_review = PolarBear::Review.new(
     :title => 'my nice review',
+    :author => _codecollab.configuration.username,
     :reviewers => %w(jearl),
     :observers => %w(aburr),
     :gitdiffs_args => 'develop master'
 )
-new_review.save!
+new_review.create_it!
 new_review.add_git_diff('develop', 'master')
 
 p new_review

@@ -7,16 +7,14 @@ module PolarBear
   class Review
 
     attr_reader :phase
-    attr_reader :review_id
+    attr_reader :id
     attr_reader :creator
     attr_reader :creation_date
     attr_accessor :title
     attr_accessor :participants
 
     def initialize(hash)
-
       load_data(hash)
-
     end
 
     def active?
@@ -25,14 +23,6 @@ module PolarBear
 
     def planning?
       %w(Planning).include?(@phase)
-    end
-
-    def save!
-      if @review_id.nil?
-        create_new_review
-      else
-        save_review
-      end
     end
 
     def cancel!
@@ -44,16 +34,14 @@ module PolarBear
     end
 
     def add_git_diff(branch_a, branch_b)
-      p @review_id
-      raise 'must be a valid review' if @review_id.nil?
-      Utils::Executor.instance.execute_command("--no-browser --quiet addgitdiffs #{@review_id} #{branch_a} #{branch_b}")
+      raise 'must be a valid review' if @review_content[:id].nil?
+      Utils::Executor.instance.execute_command("--no-browser --quiet addgitdiffs #{@review_content[:id]} #{branch_a} #{branch_b}")
     end
 
-    private
-
-    def create_new_review
-      raise 'must specify 1 reviewers' if @reviewers.empty?
-      raise 'must contain diffs' if @gitdiffs_args.nil?
+    def create_it!
+      raise 'must not already have an id' if ! @review_content[:id].nil?
+      raise 'must specify authors' if @review_content[:author].nil?
+      raise 'must specify 1 reviewers' if @review_content[:reviewers].empty?
 
       options = PolarBear::Command::GlobalOptions.new()
       batch = PolarBear::Command::Batch.new(options)
@@ -63,9 +51,9 @@ module PolarBear
 
       add_participants_content = { }
       add_participants_content.compare_by_identity
-      add_participants_content[':participant'] = 'author=plaplante'
-      @reviewers.each {|reviewer| add_participants_content[':participant'] = "reviewer=#{reviewer}" }
-      @observers.each {|observer| add_participants_content[':participant'] = "observer=#{observer}" }
+      add_participants_content[':participant'] = "author=#{@review_content[:author]}"
+      @review_content[:reviewers].each {|reviewer| add_participants_content[':participant'] = "reviewer=#{reviewer}" }
+      @review_content[:observers].each {|observer| add_participants_content[':participant'] = "observer=#{observer}" }
       add_participants_content[':review'] = 'last'
       batch.add_command(':admin_review_set-participants', add_participants_content)
 
@@ -80,22 +68,17 @@ module PolarBear
 
     end
 
-    def save_review
-
-    end
+    private
 
     def load_data(hash)
       @review_content = normalize_hash(hash)
 
       @phase = @review_content[:phase] rescue ''
-      @review_id = @review_content[:id] rescue nil
+      @id = @review_content[:id] rescue nil
       @creator = @review_content[:creator_login] rescue nil
       @creation_date = @review_content[:creation_date] rescue nil
       @title = @review_content[:title] rescue nil
       @defect_count = @review_content[:defect_count] rescue 0
-      @reviewers = @review_content[:reviewers] rescue []
-      @observers = @review_content[:observers] rescue []
-      @gitdiffs_args = @review_content[:gitdiffs_args] rescue nil
     end
 
     def normalize_hash(hash)

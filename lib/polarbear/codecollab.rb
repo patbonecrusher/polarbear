@@ -24,8 +24,8 @@ module PolarBear
     # :startdoc:
 
     attr_accessor :ccollab_execpath
-
     attr_reader :commands
+    attr_reader :configuration
 
     # --------------------------------------------------------------------------
     # --------------------------------------------------------------------------
@@ -103,7 +103,7 @@ module PolarBear
 
       reviews.each do |review|
         puts review.inspect
-        batch.add_command('admin_review_cancel', {':review' => "#{review.review_id}"})
+        batch.add_command('admin_review_cancel', {':review' => "#{review.id}"})
       end
 
       @admin.execute_batch_command(batch)
