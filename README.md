@@ -1,6 +1,7 @@
 # Polarbear
 
 <a href="https://codeclimate.com/github/patbonecrusher/polarbear"><img src="https://codeclimate.com/github/patbonecrusher/polarbear.png" /></a>
+
 TODO: Write a gem description
 
 ## Installation
