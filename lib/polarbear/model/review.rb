@@ -53,7 +53,6 @@ module PolarBear
       batch.add_command(':admin_review-xml', {':review' => 'last'})
 
       update_review_from_xml(batch.execute)
-
     end
 
     private

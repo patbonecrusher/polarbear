@@ -13,15 +13,17 @@ module PolarBear
       def load_from_local_settings
         config_data = Utils::Executor.instance.execute_command('set')
 
-        keyValues = []
+        hash = {}
         config_data.each_line { |l|
-          if l.include? '='
-            keyValues.push(l.gsub(/\s+/, '').chomp)
+          updated_line = l.gsub(/\s+/, '').chomp
+
+          regex = /(([^=;]*)=([^=;]*);?)+/
+          match = updated_line.match regex
+          if !match.nil? && !match[3].empty? && match[3] != '(Empty)'
+            hash[match[2]] = match[3]
           end
         }
-
-        Hash[keyValues.each.map { |kv| kv.chomp.split('=', 2) }]
-
+        hash
       end
 
     end #class Config

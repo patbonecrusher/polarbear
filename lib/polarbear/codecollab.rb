@@ -9,6 +9,7 @@ require 'polarbear/model/configuration'
 require 'nori'
 require 'open-uri'
 require 'csv'
+require 'etc'
 
 module PolarBear
 
@@ -17,13 +18,6 @@ module PolarBear
   class CodeCollab
     include PolarBear::Utils
 
-    # :stopdoc:
-    VALID_OPTIONS = %w/
-      ccollab_execpath
-    /
-    # :startdoc:
-
-    attr_accessor :ccollab_execpath
     attr_reader :commands
     attr_reader :configuration
 
@@ -32,9 +26,17 @@ module PolarBear
     # @return [Object]
     def initialize
 
-      @ccollab_execpath = find_ccollab_executable
-      Utils::Executor.instance.set_codecollab_exec_path(@ccollab_execpath)
-      puts @ccollab_execpath
+      # do we have a config file?  If so, load that and see if the exec path.
+      load_pb_options
+
+      if @polarbear_options[:ccollab_execpath].nil?
+        p 'Searching for code collaborator executable...'
+        @polarbear_options[:ccollab_execpath] = find_ccollab_executable
+        save_pb_options
+      end
+      raise "Can't find code collab executable on your system" if @polarbear_options[:ccollab_execpath].nil?
+
+      Utils::Executor.instance.set_codecollab_exec_path(@polarbear_options[:ccollab_execpath])
 
       @commands = {}
       @commands[:admin] = Command::Admin.new
@@ -86,7 +88,19 @@ module PolarBear
       Utils::Executor.instance.execute_command('logout')
     end
 
+    def load_pb_options
+      option_file="#{Dir.home}/.polarbear"
+      if File.exist?(option_file)
+        @polarbear_options = YAML.load_file(option_file)
+      else
+        @polarbear_options = {}
+      end
+    end
 
+    def save_pb_options
+      option_file="#{Dir.home}/.polarbear"
+      File.open(option_file, 'w') { |fo| fo.puts @polarbear_options.to_yaml }
+    end
   end
 
 end

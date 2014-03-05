@@ -1,5 +1,4 @@
 require 'polarbear/utils/executor'
-require 'gyoku'
 
 module PolarBear
   module Command

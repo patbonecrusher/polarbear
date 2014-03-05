@@ -1,4 +1,19 @@
 #!/usr/bin/env ruby
+require 'command-dispatcher'
+
+$scriptPath = File.expand_path(File.dirname(__FILE__))
+$scriptName = File.basename(__FILE__)
+$command = ARGV.shift
+dispatcher = CommandDispatcher::Dispatcher.new( $scriptPath, $scriptName )
+
+begin
+  dispatcher.dispatchCommand($command, *ARGV)
+rescue ArgumentError => ex
+  $stderr.puts 'Error: ' + ex.to_s + '.  Please specify a valid command.'
+  dispatcher.usage
+  exit -1
+ensure
+end
 
 require 'highline/import'
 require 'base64'
@@ -11,18 +26,14 @@ require 'polarbear'
 #-----------------------------------------------------------------------------
 # This hash will hold all of the options parsed from the command-line by
 # OptionParser.
-# config
-# adding reviewer
-# adding observer
-# adding diff
-# creating a review
+# login/logout
+# creating a new review (reviewer/observers, title)
+# adding diff to an existing review
 # cancelling review
-# starting a review
 # finishing a review
 # deleting a review
 # open a review in the browser
-# get a review id
-# get state of a review
+# get review info such as state by id or by title
 #-----------------------------------------------------------------------------
 options = {}
 loglevels = [:debug, :info, :warn, :error, :fatal]
@@ -32,6 +43,11 @@ optparse = OptionParser.new do |opts|
   opts.banner = 'Usage: poohbear [options] oldbranch newbranch ...'
    
   # Define the options, and what they do
+  options[:list] = []
+  opts.on('--login', 'login to the code collaborator server') do |l|
+    options[:list] = l
+  end
+
   options[:quick] = false
   opts.on( '-q', '--quick', 'Perform the task quickly' ) do
     options[:quick] = true
