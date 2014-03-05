@@ -43,7 +43,8 @@ module PolarBear
       end
 
       def execute
-        Utils::Executor.instance.execute_command('admin batch - ', Gyoku.xml(@command))
+        puts Gyoku.xml(@command)
+        Utils::Executor.instance.execute_command('--quiet admin batch - ', Gyoku.xml(@command))
       end
     end
 

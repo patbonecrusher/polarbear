@@ -110,7 +110,7 @@ module PolarBear
     end
 
     def login(url, username, password)
-      @commands[:admin].execute_command("login #{url} #{username} #{password}")
+      Utils::Executor.instance.execute_command("login #{url} #{username} #{password}")
     end
 
     def logout(url, username, password)

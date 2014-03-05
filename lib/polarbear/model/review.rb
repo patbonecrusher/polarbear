@@ -43,8 +43,10 @@ module PolarBear
 
     end
 
-    def add_git_diff
-
+    def add_git_diff(branch_a, branch_b)
+      p @review_id
+      raise 'must be a valid review' if @review_id.nil?
+      Utils::Executor.instance.execute_command("--no-browser --quiet addgitdiffs #{@review_id} #{branch_a} #{branch_b}")
     end
 
     private
@@ -61,18 +63,19 @@ module PolarBear
 
       add_participants_content = { }
       add_participants_content.compare_by_identity
+      add_participants_content[':participant'] = 'author=plaplante'
       @reviewers.each {|reviewer| add_participants_content[':participant'] = "reviewer=#{reviewer}" }
       @observers.each {|observer| add_participants_content[':participant'] = "observer=#{observer}" }
       add_participants_content[':review'] = 'last'
       batch.add_command(':admin_review_set-participants', add_participants_content)
 
-      batch.add_command(':addgitdiffs', {':review' => 'last', ':user-diff-arg' => @gitdiffs_args})
-      batch.add_command(':admin_review-finish', {':review' => 'last'})
+      batch.add_command(':admin_review_finish', {':review' => 'last'})
       batch.add_command(':admin_review-xml', {':review' => 'last'})
 
       review_xml = batch.execute
       parser = Nori.new(:convert_tags_to => lambda { |tag| tag.snakecase.to_sym })
       review_hash = parser.parse(review_xml)
+
       load_data(review_hash[:reviews][:review][:general])
 
     end
@@ -85,7 +88,7 @@ module PolarBear
       @review_content = normalize_hash(hash)
 
       @phase = @review_content[:phase] rescue ''
-      @review_id = @review_content[:review_id] rescue nil
+      @review_id = @review_content[:id] rescue nil
       @creator = @review_content[:creator_login] rescue nil
       @creation_date = @review_content[:creation_date] rescue nil
       @title = @review_content[:title] rescue nil
