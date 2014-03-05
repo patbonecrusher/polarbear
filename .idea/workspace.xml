@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/codecollab.rb" afterPath="$PROJECT_DIR$/lib/polarbear/codecollab.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/command/config.rb" afterPath="$PROJECT_DIR$/lib/polarbear/command/config.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/model/configuration.rb" afterPath="$PROJECT_DIR$/lib/polarbear/model/configuration.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/poohbear" afterPath="$PROJECT_DIR$/bin/poohbear" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/model/review.rb" afterPath="$PROJECT_DIR$/lib/polarbear/model/review.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="polarbear.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -18,7 +12,7 @@
     <file path="/command_executor.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393446849599" ignored="false" />
     <file path="/executor.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393975404801" ignored="false" />
     <file path="/admin.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393969673330" ignored="false" />
-    <file path="/codecollab.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393980190513" ignored="false" />
+    <file path="/codecollab.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393981194426" ignored="false" />
     <file path="/review.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393980595473" ignored="false" />
     <file path="/batch.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393979111043" ignored="false" />
     <file path="/polarbear.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393970943917" ignored="false" />
@@ -48,10 +42,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="codecollab.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="codecollab.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/polarbear/codecollab.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="47" selection-start="647" selection-end="647" vertical-scroll-proportion="0.0">
+            <state line="78" column="0" selection-start="2433" selection-end="2433" vertical-scroll-proportion="0.6214953">
               <folding />
             </state>
           </provider>
@@ -66,10 +60,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="review.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="review.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/polarbear/model/review.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="27" selection-start="2232" selection-end="2232" vertical-scroll-proportion="2.728972">
+            <state line="73" column="27" selection-start="2232" selection-end="2232" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -168,11 +162,11 @@
         <option value="$PROJECT_DIR$/lib/polarbear/command/admin.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/command/report.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/command/batch.rb" />
-        <option value="$PROJECT_DIR$/lib/polarbear/codecollab.rb" />
         <option value="$PROJECT_DIR$/bin/poohbear" />
         <option value="$PROJECT_DIR$/lib/polarbear/model/review.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/command/config.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/model/configuration.rb" />
+        <option value="$PROJECT_DIR$/lib/polarbear/codecollab.rb" />
       </list>
     </option>
   </component>
@@ -709,13 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/polarbear/utils/ccollab_locator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/polarbear/command/admin.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
@@ -744,13 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/polarbear/codecollab.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="47" selection-start="647" selection-end="647" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/polarbear/command/config.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="8" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
@@ -774,7 +754,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/polarbear/model/review.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="27" selection-start="2232" selection-end="2232" vertical-scroll-proportion="2.728972">
+        <state line="73" column="27" selection-start="2232" selection-end="2232" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/polarbear/utils/ccollab_locator.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/polarbear/codecollab.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="0" selection-start="2433" selection-end="2433" vertical-scroll-proportion="0.6214953">
           <folding />
         </state>
       </provider>
