@@ -3,11 +3,12 @@
 require 'highline/import'
 require 'base64'
 require 'polarbear'
+require 'gitit'
 
 #-----------------------------------------------------------------------------
 #-----------------------------------------------------------------------------
 def usage
-  puts 'Commands for login in your code collaborator server.'
+  puts 'Commands for creating a new review.'
   exit 0
 end
 
@@ -16,42 +17,48 @@ end
 #-----------------------------------------------------------------------------
 
 #-----------------------------------------------------------------------------
-# This hash will hold all of the options parsed from the command-line by
-# OptionParser.
-# login/logout
-# creating a new review (reviewer/observers, title)
-# adding diff to an existing review
-# cancelling review
-# finishing a review
-# deleting a review
-# open a review in the browser
-# get review info such as state by id or by title
+# Will try to infer the source control mechanism if possible and call.
 #-----------------------------------------------------------------------------
 options = {}
 
 optparse = OptionParser.new do |opts|
   # Set a banner, displayed at the top of the help screen.
-  opts.banner = 'Usage: poohbear [options] oldbranch newbranch ...'
+  opts.banner = 'Usage: poohbear create [options]'
 
   # Define the options, and what they do
-  options[:username] = nil
-  opts.on('-n', '--username username', 'username') do |l|
-    options[:username] = l
+  options[:title] = nil
+  opts.on('-t', '--title title', 'review title') do |title|
+    options[:title] = title
   end
 
-  options[:password] = nil
-  opts.on('-p', '--password PASSWORD', 'password') do |l|
-    options[:password] = l
+  options[:reviewers] = []
+  opts.on('-r', '--reviewers reva,revb,revc', 'list of reviewers') do |reviewers|
+    options[:reviewers] = reviewers
   end
 
-  options[:url] = nil
-  opts.on('-s', '--url URL', 'url') do |l|
-    options[:url] = l
+  options[:observers] = []
+  opts.on('-o', '--observers reva,revb,revc', 'list of observers') do |observers|
+    options[:observers] = observers
+  end
+
+  options[:base_branch] = nil
+  opts.on('-b', '--base_branch branch', 'base branch name') do |branch|
+    options[:base_branch] = branch
+  end
+
+  options[:current_branch] = nil
+  opts.on('-c', '--current_branch branch', 'current branch name') do |branch|
+    options[:current_branch] = branch
   end
 
   options[:usage] = nil
   opts.on( '-u', '--usage', 'Print one liner about this script' ) do
     options[:usage] = true
+  end
+
+  options[:auto_answer] = nil
+  opts.on( '-y', '--auto_answer', 'Won\'t prompt the user for anything and rely on args and defaults' ) do
+    options[:auto_answer] = true
   end
 
   opts.on( '-v', '--verbose', 'Verbose ') do
@@ -81,13 +88,59 @@ end
 
 usage if options[:usage]
 
-_codecollab = PolarBear::CodeCollab.new
+# Do some validation
+_gitit = Gitit::Git.new(Dir.pwd)
+unless _gitit.repo.valid?
+  p 'poohbear must be run from a folder that is a valid git repo'
+  exit 1
+end
 
-options[:url] = _codecollab.configuration.url if options[:url].nil?
-options[:username] = _codecollab.configuration.username if options[:username].nil?
+# Prepare our default thing
+begin
+  _reviewers = _gitit.config.get_value('poohbear.reviewers')
+  _observers = _gitit.config.get_value('poohbear.observers')
+rescue
+  _reviewers = ''
+  _observers = ''
+end
 
-options[:url] = ask('URL: ') if options[:url].nil? || options[:url].empty?
-options[:username] = ask('Username: ') if options[:username].nil? || options[:username].empty?
-options[:password] = ask('Password: ') { |q| q.echo = '*' } if options[:password].nil?
+_current_branch = _gitit.branches.get_current_branch
+_base_branch = _gitit.branches.exists_locally?('develop') ? 'develop' : 'master'
 
-_codecollab.login("#{options[:url]}", "#{options[:username]}", "\"#{options[:password]}\"")
+# Ask user if we have to.
+if options[:auto_answer]
+  options[:title] = _current_branch if options[:title].nil?
+  options[:reviewers] = _reviewers if options[:reviewers].empty?
+  options[:observers] = _observers if options[:observers].empty?
+  options[:base_branch] = _base_branch if options[:base_branch].nil?
+  options[:current_branch] = _current_branch if options[:current_branch].nil?
+else
+  options[:title] = ask('title: ') { |q| q.default = _current_branch } if options[:title].nil?
+  options[:reviewers] = ask('reviewers (coma separated): ') { |q| q.default = _reviewers } if options[:reviewers].empty?
+  options[:observers] = ask('observers: ') { |q| q.default = _observers } if options[:observers].empty?
+  options[:base_branch] = ask('base branch diffing against: ') { |q| q.default = _base_branch } if options[:base_branch].nil?
+  options[:current_branch] = ask('current branch diffed against base_branch: ') { |q| q.default = _current_branch } if options[:current_branch].nil?
+end
+
+# Create the review
+begin
+  _codecollab = PolarBear::CodeCollab.new
+  new_review = PolarBear::Review.new(
+      :title => options[:title],
+      :author => _codecollab.configuration.username,
+      :reviewers => options[:reviewers].split(','),
+      :observers => options[:observers].split(',')
+  )
+  new_review.create_it!
+  new_review.add_git_diff(options[:base_branch], options[:current_branch])
+rescue => ex
+  p ex.to_s
+  exit 1
+end
+
+# Remember our settings
+_gitit.config.set_value('poohbear.reviewers', options[:reviewers])
+_gitit.config.set_value('poohbear.observers', options[:observers])
+
+p "Review successfully created.  Id is: #{new_review.id}"
+exit 0

@@ -7,7 +7,7 @@ require 'polarbear'
 #-----------------------------------------------------------------------------
 #-----------------------------------------------------------------------------
 def usage
-  puts 'Commands for login in your code collaborator server.'
+  puts 'Commands for login out from your code collaborator server.'
   exit 0
 end
 
@@ -16,38 +16,12 @@ end
 #-----------------------------------------------------------------------------
 
 #-----------------------------------------------------------------------------
-# This hash will hold all of the options parsed from the command-line by
-# OptionParser.
-# login/logout
-# creating a new review (reviewer/observers, title)
-# adding diff to an existing review
-# cancelling review
-# finishing a review
-# deleting a review
-# open a review in the browser
-# get review info such as state by id or by title
 #-----------------------------------------------------------------------------
 options = {}
 
 optparse = OptionParser.new do |opts|
   # Set a banner, displayed at the top of the help screen.
-  opts.banner = 'Usage: poohbear [options] oldbranch newbranch ...'
-
-  # Define the options, and what they do
-  options[:username] = nil
-  opts.on('-n', '--username username', 'username') do |l|
-    options[:username] = l
-  end
-
-  options[:password] = nil
-  opts.on('-p', '--password PASSWORD', 'password') do |l|
-    options[:password] = l
-  end
-
-  options[:url] = nil
-  opts.on('-s', '--url URL', 'url') do |l|
-    options[:url] = l
-  end
+  opts.banner = 'Usage: poohbear logout'
 
   options[:usage] = nil
   opts.on( '-u', '--usage', 'Print one liner about this script' ) do

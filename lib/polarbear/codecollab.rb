@@ -58,7 +58,7 @@ module PolarBear
     end
 
     def get_review_with_title(title)
-      reports_result = @commands[:report].get_review_with_title(@configuration.username, title)
+      reports_result = @commands[:report].get_review_with_title_for(@configuration.username, title)
       reports_result.map { |report| Review.new(report) }
     end
 
