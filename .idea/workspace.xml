@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/codecollab.rb" afterPath="$PROJECT_DIR$/lib/polarbear/codecollab.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/pat.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/pat.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/version.rb" afterPath="$PROJECT_DIR$/lib/polarbear/version.rb" />
     </list>
     <ignored path="polarbear.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,10 +74,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="codecollab.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="codecollab.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/polarbear/codecollab.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="69" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.15023474">
+            <state line="65" column="69" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="version.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/polarbear/version.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="18" selection-start="35" selection-end="35" vertical-scroll-proportion="0.017214397">
               <folding />
             </state>
           </provider>
@@ -156,15 +164,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/polarbear/command/config.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -184,7 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/polarbear/model/review.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/command/admin.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/command/admin_review.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear.rb" />
@@ -200,6 +198,7 @@
         <option value="$PROJECT_DIR$/bin/poohbear-review-create" />
         <option value="$PROJECT_DIR$/bin/poohbear-review-update" />
         <option value="$PROJECT_DIR$/lib/polarbear/codecollab.rb" />
+        <option value="$PROJECT_DIR$/lib/polarbear/version.rb" />
       </list>
     </option>
   </component>
@@ -702,13 +701,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/polarbear/command/admin_review.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="39" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/polarbear.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
@@ -809,7 +801,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/polarbear/codecollab.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="69" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.15023474">
+        <state line="65" column="69" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/polarbear/version.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="18" selection-start="35" selection-end="35" vertical-scroll-proportion="0.017214397">
           <folding />
         </state>
       </provider>
