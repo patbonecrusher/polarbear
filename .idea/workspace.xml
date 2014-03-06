@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/command/batch.rb" afterPath="$PROJECT_DIR$/lib/polarbear/command/batch.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/codecollab.rb" afterPath="$PROJECT_DIR$/lib/polarbear/codecollab.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/utils/executor.rb" afterPath="$PROJECT_DIR$/lib/polarbear/utils/executor.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/polarbear.gemspec" afterPath="$PROJECT_DIR$/polarbear.gemspec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/polarbear.iml" afterPath="$PROJECT_DIR$/.idea/polarbear.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/poohbear-logout" afterPath="$PROJECT_DIR$/bin/poohbear-logout" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/poohbear-review-create" afterPath="$PROJECT_DIR$/bin/poohbear-review-create" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/poohbear-review-update" afterPath="$PROJECT_DIR$/bin/poohbear-review-update" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="polarbear.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -139,7 +131,7 @@
       <file leaf-file-name="poohbear-review-update" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/poohbear-review-update">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="49" selection-start="4026" selection-end="4026" vertical-scroll-proportion="0.5766773">
+            <state line="119" column="2" selection-start="4002" selection-end="4002" vertical-scroll-proportion="0.5766773">
               <folding />
             </state>
           </provider>
@@ -816,7 +808,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/poohbear-review-update">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="49" selection-start="4026" selection-end="4026" vertical-scroll-proportion="0.5766773">
+        <state line="119" column="2" selection-start="4002" selection-end="4002" vertical-scroll-proportion="0.5766773">
           <folding />
         </state>
       </provider>

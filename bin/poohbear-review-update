@@ -113,11 +113,13 @@ begin
     _review = _codecollab.get_review_with_id(options[:id])
   end
   raise "can't find review with title #{title}" if _review.empty?
+
   _review[0].add_git_diff(options[:base_branch], options[:current_branch])
+  p "Review successfully updated.  Id is: #{_review[0].id}"
+
+  exit 0
 rescue => ex
   p ex.to_s
   exit 1
 end
 
-p "Review successfully updated.  Id is: #{_review.id}"
-exit 0
