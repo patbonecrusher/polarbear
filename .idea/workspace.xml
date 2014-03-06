@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/poohbear-review-update" afterPath="$PROJECT_DIR$/bin/poohbear-review-update" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/codecollab.rb" afterPath="$PROJECT_DIR$/lib/polarbear/codecollab.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/pat.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/pat.xml" />
     </list>
     <ignored path="polarbear.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -12,7 +13,7 @@
     <file path="/command_executor.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394130188799" ignored="false" />
     <file path="/executor.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393975404801" ignored="false" />
     <file path="/admin.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393969673330" ignored="false" />
-    <file path="/codecollab.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394054701577" ignored="false" />
+    <file path="/codecollab.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394138928199" ignored="false" />
     <file path="/review.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393981772965" ignored="false" />
     <file path="/batch.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393979111043" ignored="false" />
     <file path="/polarbear.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1393970943917" ignored="false" />
@@ -74,10 +75,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="codecollab.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="codecollab.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/polarbear/codecollab.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="67" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.0">
+            <state line="65" column="69" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.15023474">
               <folding />
             </state>
           </provider>
@@ -128,10 +129,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="poohbear-review-update" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="poohbear-review-update" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/poohbear-review-update">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="2" selection-start="4002" selection-end="4002" vertical-scroll-proportion="0.5766773">
+            <state line="112" column="44" selection-start="3758" selection-end="3776" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -197,8 +198,8 @@
         <option value="$PROJECT_DIR$/lib/polarbear/utils/executor.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/command/batch.rb" />
         <option value="$PROJECT_DIR$/bin/poohbear-review-create" />
-        <option value="$PROJECT_DIR$/lib/polarbear/codecollab.rb" />
         <option value="$PROJECT_DIR$/bin/poohbear-review-update" />
+        <option value="$PROJECT_DIR$/lib/polarbear/codecollab.rb" />
       </list>
     </option>
   </component>
@@ -799,16 +800,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/polarbear/codecollab.rb">
+    <entry file="file://$PROJECT_DIR$/bin/poohbear-review-update">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="67" selection-start="2034" selection-end="2034" vertical-scroll-proportion="0.0">
+        <state line="112" column="44" selection-start="3758" selection-end="3776" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/poohbear-review-update">
+    <entry file="file://$PROJECT_DIR$/lib/polarbear/codecollab.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="2" selection-start="4002" selection-end="4002" vertical-scroll-proportion="0.5766773">
+        <state line="65" column="69" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.15023474">
           <folding />
         </state>
       </provider>

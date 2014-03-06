@@ -62,6 +62,12 @@ module PolarBear
       reports_result.map { |report| Review.new(report) }
     end
 
+    def get_review_with_id(id)
+      parser = Nori.new(:convert_tags_to => lambda { |tag| tag.snakecase.to_sym })
+      review_hash = parser.parse(@commands[:admin].get_review_xml_info(id))
+      Review.new(review_hash[:reviews][:review][:general])
+    end
+
     def last_review
       parser = Nori.new(:convert_tags_to => lambda { |tag| tag.snakecase.to_sym })
       review_hash = parser.parse(@commands[:admin].get_review_xml_info('last'))
