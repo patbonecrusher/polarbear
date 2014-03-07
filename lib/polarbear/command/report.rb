@@ -64,7 +64,7 @@ module PolarBear
 
       def execute_report_request(args)
         query_string = args.to_a.map { |x| "#{x[0].gsub(/:/,'')}=#{x[1]}" }.join('&')
-        review_report = Utils::Executor.instance.execute_command("--quiet admin wget \"/go?#{query_string}\"")
+        review_report = Admin.new.fetch_report(query_string)
 
         review_report = review_report.gsub(/'/,' ')
         review_report = review_report.gsub(/"/,' ')

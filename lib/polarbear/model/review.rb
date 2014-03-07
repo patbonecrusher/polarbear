@@ -1,4 +1,5 @@
 require 'polarbear/command/batch'
+require 'polarbear/command/admin_review'
 require 'nori'
 
 
@@ -15,6 +16,7 @@ module PolarBear
 
     def initialize(hash)
       load_data(hash)
+      @admin_review = Command::AdminReview.new
     end
 
     def active?
@@ -26,11 +28,19 @@ module PolarBear
     end
 
     def cancel!
-
+      @admin_review.cancel(@id)
     end
 
     def delete!
+      @admin_review.delete(@id)
+    end
 
+    def next_phase!
+      @admin_review.finish(@id)
+    end
+
+    def browse
+      Utils::Executor.instance.execute_command("browse --review #{@id}")
     end
 
     def add_git_diff(branch_a, branch_b)

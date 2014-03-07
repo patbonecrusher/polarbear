@@ -7,75 +7,30 @@ module PolarBear
     # --------------------------------------------------------------------------
     class AdminReview
 
-      # Create a new Review
-      def create
-
-      end
-
-      # Edit an existing Review
-      def edit
-
-      end
-
       # Delete an existing Review
-      def delete
-
+      def delete(id)
+        execute_admin_review_command('delete', id)
       end
 
       # Cancel an in-progress Review
-      def cancel
-
+      def cancel(id)
+        execute_admin_review_command('cancel', id)
       end
 
       # Reject an in-progress Review
-      def reject
-
-      end
-
-      # Wait for a response in a Review
-      def wait
-
+      def reject(id)
+        execute_admin_review_command('reject', id)
       end
 
       # Finish current phase of a Review
-      def finish
-
+      def finish(id)
+        execute_admin_review_command('finish', id)
       end
 
-      # Move a review from Planning to Annotating
-      def annotate
-
+      def execute_admin_review_command(command, args)
+        Utils::Executor.instance.execute_command("--no-browser --quiet admin review #{command} #{args}")
       end
 
-      # Copy Participants from one Review to another
-      def copy_participants
-
-      end
-
-      # Set Participants for a Review
-      def set_participants
-
-      end
-
-      # Administer Review Participants
-      def participant
-
-      end
-
-      # Administer Review Comments
-      def comment
-
-      end
-
-      # Administer Review Defects
-      def defect
-
-      end
-
-      # Administer Review Conversations
-      def conversation
-
-      end
     end # class Admin Review
 
   end # module Command

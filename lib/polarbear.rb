@@ -4,6 +4,7 @@ require 'polarbear/codecollab'
 require 'polarbear/utils/ccollab_locator'
 
 require 'polarbear/command/admin'
+require 'polarbear/command/admin_review'
 require 'polarbear/command/report'
 require 'polarbear/command/config'
 
