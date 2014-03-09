@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Polarbear::VERSION
   spec.authors       = ['Bone Crusher']
   spec.email         = %w(pat@covenofchaos.com)
-  spec.description   = %q{}
-  spec.summary       = %q{}
-  spec.homepage      = ''
+  spec.description   = %q{smart bear code collaborator command line ruby interface}
+  spec.summary       = %q{this is a work in progress}
+  spec.homepage      = 'https://github.com/patbonecrusher/polarbear'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)

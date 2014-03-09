@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/poohbear-review-open" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/version.rb" afterPath="$PROJECT_DIR$/lib/polarbear/version.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/polarbear.gemspec" afterPath="$PROJECT_DIR$/polarbear.gemspec" />
     </list>
     <ignored path="polarbear.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394130517736" ignored="false" />
+    <file path="/Dummy.txt" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394228848572" ignored="false" />
     <file path="/poohbear" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394052094572" ignored="false" />
-    <file path="/polarbear.gemspec" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394135029194" ignored="false" />
-    <file path="/command_executor.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394130188799" ignored="false" />
+    <file path="/polarbear.gemspec" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394225466675" ignored="false" />
+    <file path="/command_executor.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394226499342" ignored="false" />
     <file path="/executor.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394206742035" ignored="false" />
     <file path="/admin.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394145010700" ignored="false" />
     <file path="/codecollab.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394138928199" ignored="false" />
@@ -33,13 +31,13 @@
     <file path="$PROJECT_DIR$/../gitit/lib/gitit/git.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394129691313" ignored="false" />
     <file path="$PROJECT_DIR$/../gitit/lib/gitit/command_status.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394131239725" ignored="false" />
     <file path="/command_status.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394131239326" ignored="false" />
-    <file path="/a.dummy" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394130129193" ignored="false" />
-    <file path="$PROJECT_DIR$/../gitit/lib/gitit/command_executor.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394130204714" ignored="false" />
+    <file path="/a.dummy" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394225654896" ignored="false" />
+    <file path="$PROJECT_DIR$/../gitit/lib/gitit/command_executor.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394226505445" ignored="false" />
     <file path="$PROJECT_DIR$/../gitit/lib/gitit/command_config.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394136292410" ignored="false" />
     <file path="/command_config.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394136291539" ignored="false" />
-    <file path="$PROJECT_DIR$/../gitit/lib/gitit/command_branches.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394134755900" ignored="false" />
-    <file path="/command_branches.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394134737736" ignored="false" />
-    <file path="$PROJECT_DIR$/../gitit/lib/gitit/command_branch.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394130375104" ignored="false" />
+    <file path="$PROJECT_DIR$/../gitit/lib/gitit/command_branches.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394227039122" ignored="false" />
+    <file path="/command_branches.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394226806399" ignored="false" />
+    <file path="$PROJECT_DIR$/../gitit/lib/gitit/command_branch.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394226999528" ignored="false" />
     <file path="/command_branch.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394130370987" ignored="false" />
     <file path="$PROJECT_DIR$/../gitit/spec/gitit_branch_spec.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394130798532" ignored="false" />
     <file path="/gitit_branch_spec.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394130422162" ignored="false" />
@@ -58,6 +56,10 @@
     <file path="/poohbear-review-cancel" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394145744583" ignored="false" />
     <file path="/poohbear-review-status" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394145522406" ignored="false" />
     <file path="/poohbear-review-open" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394206662519" ignored="false" />
+    <file path="$PROJECT_DIR$/../gitit/coverage/assets/0.7.1/application.js" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394228718024" ignored="false" />
+    <file path="$PROJECT_DIR$/../gitit/coverage/index.html" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394228718024" ignored="false" />
+    <file path="$PROJECT_DIR$/../gitit/coverage/assets/0.7.1/application.css" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394228718024" ignored="false" />
+    <file path="$PROJECT_DIR$/../gitit/coverage/.resultset.json" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394228718024" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,10 +136,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="version.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="version.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/polarbear/version.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="18" selection-start="35" selection-end="35" vertical-scroll-proportion="0.017214397">
+            <state line="1" column="18" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="polarbear.gemspec" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/polarbear.gemspec">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="47" selection-start="937" selection-end="937" vertical-scroll-proportion="0.32791328">
               <folding />
             </state>
           </provider>
@@ -147,15 +158,6 @@
         <entry file="file://$PROJECT_DIR$/bin/poohbear-review-status">
           <provider selected="true" editor-type-id="text-editor">
             <state line="104" column="43" selection-start="3340" selection-end="3340" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin_review.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/polarbear/command/admin_review.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="21" selection-start="243" selection-end="254" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -189,7 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/polarbear.gemspec" />
         <option value="$PROJECT_DIR$/bin/poohbear-review-create" />
         <option value="$PROJECT_DIR$/bin/poohbear-review-update" />
         <option value="$PROJECT_DIR$/lib/polarbear/codecollab.rb" />
@@ -205,13 +206,14 @@
         <option value="$PROJECT_DIR$/lib/polarbear/model/review.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/utils/executor.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/version.rb" />
+        <option value="$PROJECT_DIR$/polarbear.gemspec" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1576" />
-    <option name="height" value="876" />
+    <option name="width" value="1680" />
+    <option name="height" value="975" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -621,7 +623,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1576" height="876" extended-state="6" />
+    <frame x="0" y="22" width="1680" height="975" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -629,11 +631,11 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277849" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24965326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24575163" sideWeight="0.88575095" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23011015" sideWeight="0.89863324" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3979461" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.114249036" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10136674" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -707,13 +709,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/polarbear.gemspec">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="67" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/poohbear-review-create">
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="0" selection-start="0" selection-end="4971" vertical-scroll-proportion="0.0">
@@ -814,7 +809,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/polarbear/version.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="18" selection-start="35" selection-end="35" vertical-scroll-proportion="0.017214397">
+        <state line="1" column="18" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/polarbear.gemspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="47" selection-start="937" selection-end="937" vertical-scroll-proportion="0.32791328">
           <folding />
         </state>
       </provider>
