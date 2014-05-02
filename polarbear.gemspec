@@ -32,7 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'highline'
   spec.add_dependency 'nori'
   spec.add_dependency 'nokogiri'
-  spec.add_dependency 'gyoku'
+  spec.add_dependency 'xml-fu'
   spec.add_dependency 'addressable'
   spec.add_dependency 'command-dispatcher'
   spec.add_dependency 'gitit', '1.1.0'

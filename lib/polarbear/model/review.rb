@@ -76,7 +76,6 @@ module PolarBear
 
     def load_participants_in_batch(batch)
       add_participants_content = { }
-      add_participants_content.compare_by_identity
       add_participants_content[':participant'] = "author=#{@review_content[:author]}"
       @review_content[:reviewers].each {|reviewer| add_participants_content[':participant'] = "reviewer=#{reviewer}" }
       @review_content[:observers].each {|observer| add_participants_content[':participant'] = "observer=#{observer}" }

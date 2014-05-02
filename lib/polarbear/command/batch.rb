@@ -1,4 +1,4 @@
-require 'gyoku'
+require 'xml-fu'
 
 module PolarBear
   module Command
@@ -17,8 +17,8 @@ module PolarBear
 
       def to_hash
         Hash result = {}
-        result[:'no-browser/'] = '' if !@show_browser
-        result[:'non-interactive/'] = '' if !@show_browser
+        result[:'no-browser'] = '' if !@show_browser
+        result[:'non-interactive'] = '' if !@show_browser
         result[:'quiet'] = (@must_be_quiet ?'yes':'no')
         result
       end
@@ -35,15 +35,14 @@ module PolarBear
         @command = {}
         @command[':batch-commands'] = {}
         @command[':batch-commands'][:'global-options'] = options.to_hash
-        @command[':batch-commands'].compare_by_identity
       end
 
       def add_command(command_name, hash)
-        @command[':batch-commands'][":#{command_name}"] = hash
+        @command[':batch-commands'][command_name] = hash
       end
 
       def execute
-        Admin.new.execute_batch(Gyoku.xml(@command))
+        Admin.new.execute_batch(XmlFu.xml(@command))
       end
     end
 

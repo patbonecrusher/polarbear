@@ -69,7 +69,7 @@ module PolarBear
         review_report = review_report.gsub(/'/,' ')
         review_report = review_report.gsub(/"/,' ')
 
-        CSV.parse(review_report, headers: true, :header_converters => :symbol).map {|row| row.to_hash}
+        CSV.parse(review_report, :headers => true, :header_converters => :symbol).map {|row| row.to_hash}
       end
 
     end

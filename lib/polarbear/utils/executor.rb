@@ -17,6 +17,7 @@ module PolarBear
       end
 
       def execute_command(command, input = nil)
+
         last_command_output = ''
 
         bearcommand = [@codecollab_execpath, @codecollab_globaloptions, command].join(' ')
