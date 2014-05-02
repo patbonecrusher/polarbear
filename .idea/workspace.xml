@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/command/batch.rb" afterPath="$PROJECT_DIR$/lib/polarbear/command/batch.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/utils/executor.rb" afterPath="$PROJECT_DIR$/lib/polarbear/utils/executor.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/pat.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/pat.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/polarbear.gemspec" afterPath="$PROJECT_DIR$/polarbear.gemspec" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/polarbear.iml" afterPath="$PROJECT_DIR$/.idea/polarbear.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/command/report.rb" afterPath="$PROJECT_DIR$/lib/polarbear/command/report.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/model/review.rb" afterPath="$PROJECT_DIR$/lib/polarbear/model/review.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/version.rb" afterPath="$PROJECT_DIR$/lib/polarbear/version.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="polarbear.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1398977013577" ignored="false" />
     <file path="/poohbear" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394052094572" ignored="false" />
-    <file path="/polarbear.gemspec" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1399041037170" ignored="false" />
+    <file path="/polarbear.gemspec" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1399041884923" ignored="false" />
     <file path="/command_executor.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1394226499342" ignored="false" />
     <file path="/executor.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1399040215892" ignored="false" />
     <file path="/admin.rb" changelist="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" time="1399040155507" ignored="false" />
@@ -131,7 +123,7 @@
       <file leaf-file-name="polarbear.gemspec" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/polarbear.gemspec">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="115" selection-start="15" selection-end="15" vertical-scroll-proportion="0.0">
+            <state line="27" column="53" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.54310346">
               <folding />
             </state>
           </provider>
@@ -209,7 +201,6 @@
         <option value="$PROJECT_DIR$/bin/poohbear-review-cancel" />
         <option value="$PROJECT_DIR$/bin/poohbear-review-open" />
         <option value="$PROJECT_DIR$/bin/poohbear-review-create" />
-        <option value="$PROJECT_DIR$/polarbear.gemspec" />
         <option value="$PROJECT_DIR$/lib/polarbear/command/report.rb" />
         <option value="$USER_HOME$/.rvm/gems/ruby-2.1-head/gems/version-1.0.0/lib/version/ext/hash.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/model/review.rb" />
@@ -217,6 +208,7 @@
         <option value="$PROJECT_DIR$/lib/polarbear/command/batch.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/utils/executor.rb" />
         <option value="$PROJECT_DIR$/lib/polarbear/version.rb" />
+        <option value="$PROJECT_DIR$/polarbear.gemspec" />
       </list>
     </option>
   </component>
@@ -815,7 +807,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/polarbear.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="115" selection-start="15" selection-end="15" vertical-scroll-proportion="0.0">
+        <state line="27" column="53" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.54310346">
           <folding />
         </state>
       </provider>
