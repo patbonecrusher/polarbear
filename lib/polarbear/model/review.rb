@@ -51,16 +51,16 @@ module PolarBear
     def create_it!
       can_create?
 
-      options = PolarBear::Command::GlobalOptions.new()
+      options = PolarBear::Command::GlobalOptions.new
       batch = PolarBear::Command::Batch.new(options)
 
-      batch.add_command(':admin_review_create', {':title' => "#{@title}"}) unless @title.nil?
+      batch.add_command(':admin_review_create', {:title => "#{@title}"}) unless @title.nil?
       batch.add_command(':admin_review_create/', '') if @title.nil?
 
       load_participants_in_batch(batch)
 
-      batch.add_command(':admin_review_finish', {':review' => 'last'})
-      batch.add_command(':admin_review-xml', {':review' => 'last'})
+      batch.add_command(':admin_review_finish', {:review => 'last'})
+      batch.add_command(':admin_review-xml', {:review => 'last'})
 
       update_review_from_xml(batch.execute)
     end
@@ -68,18 +68,18 @@ module PolarBear
     private
 
     def can_create?
-      raise 'must not already have an id' if ! @review_content[:id].nil?
+      raise 'must not already have an id' unless @review_content[:id].nil?
       raise 'must specify authors' if @review_content[:author].nil?
       raise 'must specify 1 reviewers' if @review_content[:reviewers].empty?
       true
     end
 
     def load_participants_in_batch(batch)
-      add_participants_content = { }
-      add_participants_content[':participant'] = "author=#{@review_content[:author]}"
-      @review_content[:reviewers].each {|reviewer| add_participants_content[':participant'] = "reviewer=#{reviewer}" }
-      @review_content[:observers].each {|observer| add_participants_content[':participant'] = "observer=#{observer}" }
-      add_participants_content[':review'] = 'last'
+      add_participants_content = []
+      tmp = {}; tmp[':participant'] = "author=#{@review_content[:author]}"; add_participants_content.push(tmp.clone)
+      @review_content[:reviewers].each {|reviewer| tmp[':participant'] = "reviewer=#{reviewer}"; add_participants_content.push(tmp.clone) }
+      @review_content[:observers].each {|observer| tmp[':participant'] = "observer=#{observer}"; add_participants_content.push(tmp.clone) }
+      tmp[':review'] = 'last'; add_participants_content.push(tmp.clone)
       batch.add_command(':admin_review_set-participants', add_participants_content)
     end
 
