@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1491b7e3-61dd-48f7-90b6-06a15ae47c1c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/model/review.rb" afterPath="$PROJECT_DIR$/lib/polarbear/model/review.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/polarbear/version.rb" afterPath="$PROJECT_DIR$/lib/polarbear/version.rb" />
     </list>
     <ignored path="polarbear.iws" />
     <ignored path=".idea/workspace.xml" />
