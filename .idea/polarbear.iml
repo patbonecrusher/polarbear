@@ -44,15 +44,17 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="polarbear (v0.0.5, /Users/patricklaplante/Projects/covenofchaos/ruby/polarbear/polarbear) [path][gem]">
+      <library name="polarbear (v0.0.6, /Users/patricklaplante/Projects/covenofchaos/ruby/polarbear/polarbear) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/bin" />
           <root url="file://$MODULE_DIR$/lib" />
+          <root url="file://$MODULE_DIR$/pkg" />
           <root url="file://$MODULE_DIR$/.idea" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/bin" />
           <root url="file://$MODULE_DIR$/lib" />
+          <root url="file://$MODULE_DIR$/pkg" />
           <root url="file://$MODULE_DIR$/.idea" />
         </SOURCES>
       </library>
