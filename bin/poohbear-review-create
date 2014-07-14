@@ -56,6 +56,11 @@ optparse = OptionParser.new do |opts|
     options[:usage] = true
   end
 
+  options[:diffargs] = null
+  opts.on( '', '--diffargs', 'Instead of diffing 2 branches, diff using whatever is passed in') do |diffarguments|
+    options[:diffargs] = diffarguments
+  end
+
   options[:auto_answer] = nil
   opts.on( '-y', '--auto_answer', 'Won\'t prompt the user for anything and rely on args and defaults' ) do
     options[:auto_answer] = true
@@ -118,21 +123,27 @@ else
   options[:title] = ask('title: ') { |q| q.default = _current_branch } if options[:title].nil?
   options[:reviewers] = ask('reviewers (coma separated): ') { |q| q.default = _reviewers } if options[:reviewers].empty?
   options[:observers] = ask('observers: ') { |q| q.default = _observers } if options[:observers].empty?
-  options[:base_branch] = ask('base branch diffing against: ') { |q| q.default = _base_branch } if options[:base_branch].nil?
-  options[:current_branch] = ask('current branch diffed against base_branch: ') { |q| q.default = _current_branch } if options[:current_branch].nil?
+  if options[:diffargs].nil?
+    options[:base_branch] = ask('base branch diffing against: ') { |q| q.default = _base_branch } if options[:base_branch].nil?
+    options[:current_branch] = ask('current branch diffed against base_branch: ') { |q| q.default = _current_branch } if options[:current_branch].nil?
+  end
 end
 
 # Create the review
 begin
   _codecollab = PolarBear::CodeCollab.new
-  new_review = PolarBear::Review.new(
+  new_review = _codecollab.create_review(
       :title => options[:title],
       :author => _codecollab.configuration.username,
       :reviewers => options[:reviewers].split(','),
       :observers => options[:observers].split(',')
   )
-  new_review.create_it!
-  new_review.add_git_diff(options[:base_branch], options[:current_branch])
+
+  if options[:diffargs].nil?
+    new_review.add_git_diff(options[:base_branch], options[:current_branch])
+  else
+    new_review.add_git_diff_with_args(options[:diffargs])
+  end
 rescue => ex
   p ex.to_s
   exit 1

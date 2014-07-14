@@ -48,6 +48,11 @@ module PolarBear
       Utils::Executor.instance.execute_command("--no-browser --quiet addgitdiffs #{@review_content[:id]} #{branch_a} #{branch_b}")
     end
 
+    def add_git_diff_with_args(diffargs)
+      raise 'must be a valid review' if @review_content[:id].nil?
+      Utils::Executor.instance.execute_command("--no-browser --quiet addgitdiffs #{@review_content[:id]} #{diffargs}")
+    end
+
     def create_it!
       can_create?
 

@@ -74,13 +74,19 @@ module PolarBear
       Review.new(review_hash[:reviews][:review][:general])
     end
 
+    def create_review(settings)
+      review = PolarBear::Review.new(settings)
+      review.create_it!
+      review
+    end
+
     def delete_reviews(reviews)
-      options = PolarBear::Command::GlobalOptions.new()
+      options = PolarBear::Command::GlobalOptions.new
       batch = PolarBear::Command::Batch.new(options)
 
       reviews.each do |review|
         puts review.inspect
-        batch.add_command('admin_review_cancel', {':review' => "#{review.id}"})
+        batch.add_command('admin_review_cancel', {:review => "#{review.id}"})
       end
 
       batch.execute
