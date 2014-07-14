@@ -36,7 +36,7 @@ module PolarBear
       end
       raise "Can't find code collab executable on your system" if @polarbear_options[:ccollab_execpath].nil?
 
-      Utils::Executor.instance.set_codecollab_exec_path(@polarbear_options[:ccollab_execpath])
+      Utils::Executor.instance.set_codecollab_exec_path("#{@polarbear_options[:ccollab_execpath]}")
 
       @commands = {}
       @commands[:admin] = Command::Admin.new

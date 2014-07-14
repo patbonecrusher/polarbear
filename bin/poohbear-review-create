@@ -56,9 +56,9 @@ optparse = OptionParser.new do |opts|
     options[:usage] = true
   end
 
-  options[:diffargs] = null
-  opts.on( '', '--diffargs', 'Instead of diffing 2 branches, diff using whatever is passed in') do |diffarguments|
-    options[:diffargs] = diffarguments
+  options[:diffargs] = nil
+  opts.on( '', '--diffargs ARGS', String, 'Instead of diffing 2 branches, diff using whatever is passed in [GIT DIFF ARGS]') do |diffarguments|
+    options[:diffargs] = diffarguments || ''
   end
 
   options[:auto_answer] = nil

@@ -20,7 +20,7 @@ module PolarBear
 
         last_command_output = ''
 
-        bearcommand = [@codecollab_execpath, @codecollab_globaloptions, command].join(' ')
+        bearcommand = ["'#{@codecollab_execpath}'", @codecollab_globaloptions, command].join(' ')
         IO.popen(bearcommand, 'r+') { |pipe|
 
           if input != nil
