@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="RUBY_MODULE" version="4">
+  <component name="CompassSettings">
+    <option name="compassSupportEnabled" value="true" />
+  </component>
   <component name="FacetManager">
     <facet type="gem" name="Gem">
       <configuration>
@@ -29,7 +32,7 @@
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/bin/poohbear" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="review create --diffargs b85f749d80630f3e118376506d6660db0048d9a1..29983e1c741df2920184250159a52b8d65b57a0f" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="review create" />
       <RunnerSettings RunnerId="RubyCover" />
       <RunnerSettings RunnerId="RubyDebugRunner" />
       <RunnerSettings RunnerId="RubyRunner" />
@@ -43,22 +46,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library name="polarbear (v0.0.6, /Users/patricklaplante/Projects/covenofchaos/ruby/polarbear/polarbear) [path][gem]">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/bin" />
-          <root url="file://$MODULE_DIR$/lib" />
-          <root url="file://$MODULE_DIR$/pkg" />
-          <root url="file://$MODULE_DIR$/.idea" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/bin" />
-          <root url="file://$MODULE_DIR$/lib" />
-          <root url="file://$MODULE_DIR$/pkg" />
-          <root url="file://$MODULE_DIR$/.idea" />
-        </SOURCES>
-      </library>
-    </orderEntry>
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.3.6, RVM: ruby-2.1-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.2, RVM: ruby-2.1-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.6.3, RVM: ruby-2.1-head) [gem]" level="application" />

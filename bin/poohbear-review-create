@@ -4,6 +4,7 @@ require 'highline/import'
 require 'base64'
 require 'polarbear'
 require 'gitit'
+require 'polarbear/model/review'
 
 #-----------------------------------------------------------------------------
 #-----------------------------------------------------------------------------
