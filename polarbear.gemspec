@@ -37,4 +37,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'command-dispatcher', '= 0.1.0'
   spec.add_dependency 'gitit', '1.1.0'
 
+  spec.add_dependency 'win32-file'
+  spec.add_dependency 'win32-security'
+
 end

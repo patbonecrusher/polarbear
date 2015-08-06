@@ -19,7 +19,7 @@ module PolarBear
         rule = File::Find.new( 
             :pattern => 'ccollab',
             :follow => false, 
-            :path => ['c:/Program Files (x86)', 'c:/Program Files'])
+            :path => ['c:/Program Files/Code Collaborator Client'])
       end
       
       # We use the block form to automatically stop once we find something.
