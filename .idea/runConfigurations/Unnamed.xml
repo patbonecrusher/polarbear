@@ -18,7 +18,7 @@
     </EXTENSION>
     <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
     <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/bin/poohbear" />
-    <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="review create" />
+    <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="review update -x 79de52a448096094ffbb0dca0f2d165929030f91..HEAD" />
     <RunnerSettings RunnerId="RubyCover" />
     <RunnerSettings RunnerId="RubyDebugRunner" />
     <RunnerSettings RunnerId="RubyRunner" />

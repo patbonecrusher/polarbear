@@ -56,6 +56,11 @@ optparse = OptionParser.new do |opts|
     options[:auto_answer] = true
   end
 
+  options[:diffargs] = nil
+  opts.on( '-x', '--diffargs ARGS', String, 'Instead of diffing 2 branches, diff using whatever is passed in [GIT DIFF ARGS]') do |diffarguments|
+    options[:diffargs] = diffarguments || ''
+  end
+
   opts.on( '-v', '--verbose', 'Verbose ') do
     options[:loglevel] = :info
   end
@@ -100,8 +105,10 @@ if options[:auto_answer]
   options[:current_branch] = _current_branch if options[:current_branch].nil?
 else
   options[:title] = ask('title: ') { |q| q.default = _current_branch } if options[:title].nil?
-  options[:base_branch] = ask('base branch diffing against: ') { |q| q.default = _base_branch } if options[:base_branch].nil?
-  options[:current_branch] = ask('current branch diffed against base_branch: ') { |q| q.default = _current_branch } if options[:current_branch].nil?
+  if options[:diffargs].nil?
+    options[:base_branch] = ask('base branch diffing against: ') { |q| q.default = _base_branch } if options[:base_branch].nil?
+    options[:current_branch] = ask('current branch diffed against base_branch: ') { |q| q.default = _current_branch } if options[:current_branch].nil?
+  end
 end
 
 # Update the review
@@ -114,7 +121,12 @@ begin
   end
   raise "can't find review with title #{title}" if _review.empty?
 
-  _review[0].add_git_diff(options[:base_branch], options[:current_branch])
+  if options[:diffargs].nil?
+    _review[0].add_git_diff(options[:base_branch], options[:current_branch])
+  else
+    _review[0].add_git_diff_with_args(options[:diffargs])
+  end
+
   p "Review successfully updated.  Id is: #{_review[0].id}"
 
   exit 0

@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'file-find', '= 0.3.8'
   spec.add_dependency 'highline', '= 1.6.21'
   spec.add_dependency 'nori', '= 2.4.0'
-  spec.add_dependency 'nokogiri', '= 1.6.1'
+  spec.add_dependency 'nokogiri', '> 1.6.1'
   spec.add_dependency 'xml-fu', '= 0.2.0'
   spec.add_dependency 'addressable', '= 2.3.6'
   spec.add_dependency 'command-dispatcher', '= 0.1.0'

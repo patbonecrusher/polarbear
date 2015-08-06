@@ -13,6 +13,7 @@ module PolarBear
     attr_reader :creation_date
     attr_accessor :title
     attr_accessor :participants
+    attr_accessor :diff_args
 
     def initialize(hash)
       load_data(hash)
@@ -46,11 +47,13 @@ module PolarBear
     def add_git_diff(branch_a, branch_b)
       raise 'must be a valid review' if @review_content[:id].nil?
       Utils::Executor.instance.execute_command("--no-browser --quiet addgitdiffs #{@review_content[:id]} #{branch_a} #{branch_b}")
+      @diff_args = "#{branch_a} #{branch_b}"
     end
 
     def add_git_diff_with_args(diffargs)
       raise 'must be a valid review' if @review_content[:id].nil?
       Utils::Executor.instance.execute_command("--no-browser --quiet addgitdiffs #{@review_content[:id]} #{diffargs}")
+      @diff_args = diffargs
     end
 
     def create_it!

@@ -151,8 +151,8 @@ rescue => ex
 end
 
 # Remember our settings
-_gitit.config.set_value('poohbear.reviewers', options[:reviewers])
-_gitit.config.set_value('poohbear.observers', options[:observers])
+_gitit.config.set_value("branch.#{_current_branch}.reviewid", new_review.id)
+_gitit.config.set_value("branch.#{_current_branch}.diffargs", new_review.diff_args)
 
 p "Review successfully created.  Id is: #{new_review.id}"
 exit 0
