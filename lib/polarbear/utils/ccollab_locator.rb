@@ -17,7 +17,7 @@ module PolarBear
             :path => %w(/Applications))
       else OS.windows?
         rule = File::Find.new( 
-            :pattern => 'ccollab',
+            :pattern => 'ccollab.exe',
             :follow => false, 
             :path => ['c:/Program Files/Code Collaborator Client'])
       end
