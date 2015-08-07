@@ -1,6 +1,8 @@
 # Polarbear
 
-<a href="https://codeclimate.com/github/patbonecrusher/polarbear"><img src="https://codeclimate.com/github/patbonecrusher/polarbear.png" /></a>
+[![Version     ](https://img.shields.io/gem/v/polarbear.svg?style=flat)](https://rubygems.org/gems/polarbear)
+[![Gittip      ](http://img.shields.io/gittip/haf.svg?style=flat)](http://gittip.com/haf)
+[![Code Climate](https://img.shields.io/codeclimate/github/patbonecrusher/polarbear.svg?style=flat)](https://codeclimate.com/github/patbonecrusher/polarbear)
 
 TODO: Write a gem description
 
