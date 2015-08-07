@@ -3,6 +3,10 @@
     <words>
       <w>diffargs</w>
       <w>diffarguments</w>
+      <w>libnotify</w>
+      <w>libsnotify</w>
+      <w>revb</w>
+      <w>revc</w>
     </words>
   </dictionary>
 </component>
