@@ -1,7 +1,7 @@
 # Polarbear
 
 [![Version     ](https://img.shields.io/gem/v/polarbear.svg?style=flat)](https://rubygems.org/gems/polarbear)
-[![Build Status](http://img.shields.io/travis/patbonecrusher/polarbear/master.svg?style=flat)](https://travis-ci.org/patbonecrusher/polarbear)
+[![Build Status](http://img.shields.io/travis/patbonecrusher/polarbear/develop.svg?style=flat)](https://travis-ci.org/patbonecrusher/polarbear)
 [![Gittip      ](http://img.shields.io/gittip/patbonecrusher.svg?style=flat)](http://gittip.com/patbonecrusher)
 [![Code Climate](https://img.shields.io/codeclimate/github/patbonecrusher/polarbear.svg?style=flat)](https://codeclimate.com/github/patbonecrusher/polarbear)
 
